@@ -1,0 +1,46 @@
+ div {  
+   
+  width: 70vw;
+  margin: 100px auto;
+  border: 2px solid
+  black;
+  position: relative;
+    
+}
+.box{ display: block;
+width: 100%;  
+}
+
+div::before{
+   
+    content: "";
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+position: absolute;
+box-sizing: border-box;
+top: -60px;
+left: -40px;
+z-index: -2;
+transition: all 0.5s linear;
+}
+div::after{
+    background: rgba(128, 128, 128, 0.5);
+    content: "";
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+position: absolute;
+box-sizing: border-box;
+top: -40px;
+left: -20px;
+z-index: -1;
+transition: all 0.5s linear;
+}
+
+div:hover::after,div:hover::before
+{
+    top:0;
+    left: 0;
+}
+
